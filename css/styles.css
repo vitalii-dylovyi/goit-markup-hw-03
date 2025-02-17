@@ -72,13 +72,7 @@ h3 {
 }
 
 .visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+  visibility: hidden;
 }
 
 .header {
@@ -277,8 +271,8 @@ h3 {
 }
 
 .portfolio-list {
-  gap: 24px;
-  row-gap: 24px;
+  row-gap: 48px;
+  column-gap: 24px;
   display: flex;
   flex-wrap: wrap;
 }
