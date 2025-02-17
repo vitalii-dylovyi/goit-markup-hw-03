@@ -71,6 +71,16 @@ h3 {
   max-width: 1158px;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .header {
   border-bottom: 1px solid var(--accent-color);
 }
@@ -86,14 +96,18 @@ h3 {
 
 .header-nav {
   flex: 1;
-  gap: 76px;
   display: flex;
+  align-items: center;
 }
 
 .header-nav ul {
   gap: 40px;
   display: flex;
   align-items: center;
+}
+
+.header-nav .site-link {
+  margin-right: 76px;
 }
 
 .header-address {
@@ -112,6 +126,7 @@ h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   line-height: 1.17;
+  display: inline-block;
   letter-spacing: 0.54px;
   color: var(--primary-color);
   text-transform: uppercase;
@@ -160,6 +175,7 @@ h3 {
 
 .hero-title {
   font-size: 56px;
+  max-width: 496px;
   line-height: 1.07;
   text-align: center;
   margin-bottom: 48px;
@@ -169,6 +185,7 @@ h3 {
 
 .primary-btn {
   flex-basis: 0;
+  min-width: 169px;
   font-weight: 500;
   line-height: 1.5;
   border-radius: 4px;
@@ -185,16 +202,16 @@ h3 {
 }
 
 .advantages-section {
-  margin: 120px 0;
+  padding: 120px 0;
 }
 
-.advantages-title {
-  display: none;
-}
-
-.advantages-section ul {
+.advantages-list {
   gap: 24px;
   display: flex;
+}
+
+.advantages-item {
+  flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
 .advantage-name {
@@ -202,12 +219,9 @@ h3 {
 }
 
 .team-section {
-  background-color: var(--light-color);
-}
-
-.team-container {
   padding-top: 120px;
   padding-bottom: 120px;
+  background-color: var(--light-color);
 }
 
 .team-container ul {
@@ -225,7 +239,6 @@ h3 {
 .team-member {
   display: flex;
   align-items: center;
-  padding-bottom: 32px;
   flex-direction: column;
   border-radius: 0 0 4px 4px;
   box-shadow:
@@ -238,16 +251,21 @@ h3 {
   background-color: var(--white-bg-color);
 }
 
+.member-info {
+  padding: 32px 0;
+}
+
 .team-member-name {
-  margin-top: 32px;
+  text-align: center;
   margin-bottom: 8px;
 }
 
 .team-member-role {
   font-size: 16px;
+  text-align: center;
 }
 
-.portfolio-container {
+.portfolio-section {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -258,8 +276,9 @@ h3 {
   text-transform: capitalize;
 }
 
-.portfolio-section ul {
+.portfolio-list {
   gap: 24px;
+  row-gap: 24px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -267,6 +286,7 @@ h3 {
 .portfolio-item-info {
   padding: 32px 16px;
   border: 1px solid var(--accent-color);
+  border-top: none;
 }
 
 .portfolio-item-name {
@@ -278,12 +298,15 @@ h3 {
   background-color: var(--dark-color);
 }
 
+.footer .site-link {
+  margin-bottom: 16px;
+}
+
 .footer .site-link .site-link-text {
   color: var(--light-color);
 }
 
 .footer-slogan {
   width: 264px;
-  margin-top: 16px;
   color: var(--light-color);
 }
